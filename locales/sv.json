@@ -43,6 +43,7 @@
       "other": "{{ count }} filter tillämpas"
     },
     "account": "Konto",
+    "back_to_top": "Back to top",
     "cart": "Varukorg",
     "cart_count": "Totalt antal artiklar i varukorgen",
     "menu": "Meny",

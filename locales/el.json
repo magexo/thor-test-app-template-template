@@ -20,6 +20,7 @@
     "slider_label": "Ρυθμιστικό"
   },
   "accessibility": {
+    "back_to_top": "Back to top",
     "play_model": "Αναπαραγωγή μοντέλου 3D",
     "play_video": "Αναπαραγωγή βίντεο",
     "unit_price": "Τιμή μονάδας",
@@ -39,6 +40,7 @@
     "slideshow_previous": "Προηγούμενη διαφάνεια",
     "filters": "Φίλτρα",
     "account": "Λογαριασμός",
+    "back_to_top": "Back to top",
     "cart": "Καλάθι",
     "cart_count": "Σύνολο προϊόντων στο καλάθι",
     "filter_count": {

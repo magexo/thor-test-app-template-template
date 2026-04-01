@@ -45,6 +45,7 @@
       "two": "Št. uporabljenih filtrov: {{ count }}"
     },
     "account": "Račun",
+    "back_to_top": "Back to top",
     "cart": "Košarica",
     "cart_count": "Skupno število izdelkov v košarici",
     "menu": "Meni",

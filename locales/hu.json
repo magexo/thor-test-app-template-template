@@ -43,6 +43,7 @@
       "other": "{{ count }} szűrő alkalmazva"
     },
     "account": "Fiók",
+    "back_to_top": "Back to top",
     "cart": "Kosár",
     "cart_count": "Összes termék a kosárban",
     "menu": "Menü",

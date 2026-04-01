@@ -39,6 +39,7 @@
     "search_results_no_results": "未找到“{{ query }}”的相关结果",
     "filters": "筛选条件",
     "account": "账户",
+    "back_to_top": "Back to top",
     "cart": "购物车",
     "cart_count": "购物车中的商品总数",
     "filter_count": {

@@ -43,6 +43,7 @@
       "other": "{{ count }} filters toegepast"
     },
     "account": "Account",
+    "back_to_top": "Back to top",
     "cart": "Winkelwagen",
     "cart_count": "Totaal aantal artikelen in winkelwagen",
     "menu": "Menu",

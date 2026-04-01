@@ -43,6 +43,7 @@
       "other": "Приложени са {{ count }} филтъра"
     },
     "account": "Профил",
+    "back_to_top": "Back to top",
     "cart": "Количка",
     "cart_count": "Общо артикули в количката",
     "menu": "Меню",

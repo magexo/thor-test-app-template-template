@@ -43,6 +43,7 @@
       "other": "{{ count }}フィルターを適用しました"
     },
     "account": "アカウント",
+    "back_to_top": "Back to top",
     "cart": "カート",
     "cart_count": "カート内の合計アイテム数",
     "menu": "メニュー",

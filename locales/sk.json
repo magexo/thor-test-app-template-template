@@ -45,6 +45,7 @@
       "many": "Použité filtre: {{ count }}"
     },
     "account": "Konto",
+    "back_to_top": "Back to top",
     "cart": "Košík",
     "cart_count": "Celkový počet položiek v košíku",
     "menu": "Ponuka",

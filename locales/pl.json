@@ -39,6 +39,7 @@
     "search_results_no_results": "Nie znaleziono wyników dla „{{ query }}”",
     "filters": "Filtry",
     "account": "Konto",
+    "back_to_top": "Back to top",
     "cart": "Koszyk",
     "cart_count": "Łączna liczba pozycji w koszyku",
     "filter_count": {

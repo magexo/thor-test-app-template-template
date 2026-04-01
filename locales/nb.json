@@ -43,6 +43,7 @@
       "other": "{{ count }} filtre brukt"
     },
     "account": "Konto",
+    "back_to_top": "Back to top",
     "cart": "Handlekurv",
     "cart_count": "Totalt antall varer i handlekurven",
     "menu": "Meny",

@@ -44,6 +44,7 @@
       "many": "{{ count }} filtres appliqués"
     },
     "account": "Compte",
+    "back_to_top": "Back to top",
     "cart": "Panier",
     "cart_count": "Nombre total d’articles dans le panier",
     "menu": "Menu",

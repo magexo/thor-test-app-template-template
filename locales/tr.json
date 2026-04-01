@@ -39,6 +39,7 @@
     "search_results_no_results": "\"{{ query }}\" için sonuç bulunamadı",
     "filters": "Filtreler",
     "account": "Hesap",
+    "back_to_top": "Back to top",
     "cart": "Sepet",
     "cart_count": "Sepetteki toplam ürün sayısı",
     "filter_count": {

@@ -1,0 +1,63 @@
+<back-to-top-component aria-hidden="true">
+  <template shadowrootmode="open">
+    <style>
+      :host {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: var(--layer-sticky, 8);
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      :host([visible]) {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        :host {
+          transition: none;
+        }
+      }
+
+      button {
+        background-color: var(--button-background-color, #000);
+        color: var(--button-color, #fff);
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      button:hover {
+        opacity: 0.85;
+      }
+
+      button:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+    </style>
+    <button type="button" ref="button" aria-label="{{ 'accessibility.back_to_top' | t }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </template>
+</back-to-top-component>
+
+<script src="{{ 'back-to-top.js' | asset_url }}" type="module"></script>
