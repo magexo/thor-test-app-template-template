@@ -330,4 +330,9 @@
       "sticky_add_to_cart": "Hurtiglinje for «Legg i handlekurv»"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Hjem",
+    "label": "Navigasjon"
+  }
 }

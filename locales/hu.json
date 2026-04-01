@@ -330,4 +330,9 @@
       "sticky_add_to_cart": "Gyors hozzáadás a kosárhoz sáv"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Főoldal",
+    "label": "Navigáció"
+  }
 }

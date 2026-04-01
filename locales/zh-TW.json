@@ -330,4 +330,9 @@
       "sticky_add_to_cart": "快速加入購物車列"
     }
   }
+,
+  "breadcrumb": {
+    "home": "首頁",
+    "label": "麵包屑導覽"
+  }
 }

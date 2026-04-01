@@ -337,4 +337,9 @@
       "success": "Commentaire publié"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Accueil",
+    "label": "Navigation"
+  }
 }

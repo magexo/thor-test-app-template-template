@@ -330,4 +330,9 @@
       "success": "Kommentti on julkaistu"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Etusivu",
+    "label": "Navigaatio"
+  }
 }

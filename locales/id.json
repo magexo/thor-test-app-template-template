@@ -330,4 +330,9 @@
       "success": "Komentar diposting"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Beranda",
+    "label": "Navigasi"
+  }
 }

@@ -330,4 +330,9 @@
       "success": "评论已发布"
     }
   }
+,
+  "breadcrumb": {
+    "home": "首页",
+    "label": "面包屑导航"
+  }
 }

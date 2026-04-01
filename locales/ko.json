@@ -330,4 +330,9 @@
       "success": "댓글 게시됨"
     }
   }
+,
+  "breadcrumb": {
+    "home": "홈",
+    "label": "탐색경로"
+  }
 }

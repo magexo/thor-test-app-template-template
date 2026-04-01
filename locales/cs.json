@@ -343,5 +343,9 @@
       "success_moderated": "Komentář odeslán, čeká na schválení",
       "success": "Komentář zveřejněn"
     }
+  },
+  "breadcrumb": {
+    "home": "Domů",
+    "label": "Navigace"
   }
 }

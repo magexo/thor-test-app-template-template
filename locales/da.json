@@ -329,5 +329,9 @@
       "success_moderated": "Kommentaren blev indsendt og afventer moderering",
       "success": "Kommentaren blev indsendt"
     }
+  },
+  "breadcrumb": {
+    "home": "Hjem",
+    "label": "Navigation"
   }
 }

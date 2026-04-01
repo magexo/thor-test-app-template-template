@@ -337,4 +337,9 @@
       "sticky_add_to_cart": "Bara de adăugare rapidă în coș"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Acasă",
+    "label": "Navigare"
+  }
 }

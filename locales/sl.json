@@ -344,4 +344,9 @@
       "success": "Komentar je bil objavljen"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Domov",
+    "label": "Navigacija"
+  }
 }

@@ -330,4 +330,9 @@
       "sticky_add_to_cart": "Thanh thêm nhanh vào giỏ hàng"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "label": "Đường dẫn"
+  }
 }

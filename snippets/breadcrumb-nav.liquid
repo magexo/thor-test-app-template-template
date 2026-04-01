@@ -1,0 +1,29 @@
+{%- liquid
+  assign breadcrumb_collection = product.collections.first
+-%}
+
+{{ 'breadcrumb-nav.css' | asset_url | stylesheet_tag }}
+
+<breadcrumb-nav class="breadcrumb-nav">
+  <nav class="breadcrumb-nav__nav" aria-label="{{ 'breadcrumb.label' | t }}">
+    <ol class="breadcrumb-nav__list">
+      <li class="breadcrumb-nav__item">
+        <a href="{{ routes.root_url }}" class="breadcrumb-nav__link">{{ 'breadcrumb.home' | t }}</a>
+      </li>
+
+      {%- if breadcrumb_collection -%}
+        <li class="breadcrumb-nav__item breadcrumb-nav__item--separator" aria-hidden="true">›</li>
+        <li class="breadcrumb-nav__item">
+          <a href="{{ breadcrumb_collection.url }}" class="breadcrumb-nav__link">{{ breadcrumb_collection.title }}</a>
+        </li>
+      {%- endif -%}
+
+      <li class="breadcrumb-nav__item breadcrumb-nav__item--separator" aria-hidden="true">›</li>
+      <li class="breadcrumb-nav__item">
+        <span class="breadcrumb-nav__current" aria-current="page">{{ product.title }}</span>
+      </li>
+    </ol>
+  </nav>
+</breadcrumb-nav>
+
+<script src="{{ 'breadcrumb-nav.js' | asset_url }}" defer></script>

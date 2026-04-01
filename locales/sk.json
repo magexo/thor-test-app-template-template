@@ -344,4 +344,9 @@
       "sticky_add_to_cart": "Panel rýchleho pridania do košíka"
     }
   }
+,
+  "breadcrumb": {
+    "home": "Domov",
+    "label": "Navigácia"
+  }
 }
