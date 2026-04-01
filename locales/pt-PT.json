@@ -336,5 +336,11 @@
       "success_moderated": "Comentário publicado, a aguardar moderação",
       "success": "Comentário publicado"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

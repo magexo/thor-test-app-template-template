@@ -329,5 +329,11 @@
       "success_moderated": "댓글이 게시되었습니다. 조정 대기 중입니다",
       "success": "댓글 게시됨"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

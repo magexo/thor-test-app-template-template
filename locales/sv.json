@@ -329,5 +329,11 @@
       "default_title": "Standardtitel",
       "sticky_add_to_cart": "Fält för att lägga till snabbt i varukorgen"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

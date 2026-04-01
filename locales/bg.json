@@ -329,5 +329,11 @@
       "success_moderated": "Коментарът е публикуван, в очакване на модериране",
       "success": "Коментарът е публикуван"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

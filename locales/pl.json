@@ -343,5 +343,11 @@
       "default_title": "Tytuł domyślny",
       "sticky_add_to_cart": "Pasek szybkiego dodawania do koszyka"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

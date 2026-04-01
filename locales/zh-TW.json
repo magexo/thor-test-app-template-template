@@ -329,5 +329,11 @@
       "default_title": "預設標題",
       "sticky_add_to_cart": "快速加入購物車列"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

@@ -329,5 +329,11 @@
       "default_title": "Alapértelmezett cím",
       "sticky_add_to_cart": "Gyors hozzáadás a kosárhoz sáv"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

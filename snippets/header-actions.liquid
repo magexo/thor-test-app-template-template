@@ -99,6 +99,29 @@
     </div>
   {% endif %}
 
+  <script type="module" src="{{ 'wishlist-icon.js' | asset_url }}" fetchpriority="low"></script>
+  <a
+    href="/pages/wishlist"
+    class="header-actions__action wishlist-icon-action"
+    aria-label="{{ 'wishlist.title' | t }}"
+  >
+    <wishlist-icon
+      class="header-actions__wishlist-icon"
+      data-testid="wishlist-icon"
+    >
+      <span class="svg-wrapper" aria-hidden="true">
+        {{- 'icon-heart.svg' | inline_asset_content -}}
+      </span>
+      <div ref="wishlistBubble" class="cart-bubble visually-hidden">
+        <span class="cart-bubble__background"></span>
+        <span class="cart-bubble__text">
+          <span class="visually-hidden">{{ 'wishlist.count' | t: count: 0 }}</span>
+          <span class="cart-bubble__text-count hidden" ref="wishlistBubbleCount" aria-hidden="true"></span>
+        </span>
+      </div>
+    </wishlist-icon>
+  </a>
+
   {% if settings.cart_type == 'drawer' and template.name != 'cart' %}
     <script
       src="{{ 'cart-drawer.js' | asset_url }}"
@@ -534,6 +557,29 @@
 
   .header__column--right header-actions {
     margin-inline-start: calc(var(--gap-md) * -1);
+  }
+
+  .header-actions__wishlist-icon {
+    --cart-bubble-size: 20px;
+    --cart-bubble-top: 4.5px;
+    --cart-bubble-right: 2.5px;
+
+    position: relative;
+  }
+
+  .header-actions__wishlist-icon .cart-bubble {
+    position: absolute;
+    width: var(--cart-bubble-size, 20px);
+    top: var(--cart-bubble-top);
+    right: var(--cart-bubble-right);
+  }
+
+  .wishlist-icon-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .header-actions__cart-icon {

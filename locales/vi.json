@@ -329,5 +329,11 @@
       "default_title": "Tiêu đề mặc định",
       "sticky_add_to_cart": "Thanh thêm nhanh vào giỏ hàng"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }

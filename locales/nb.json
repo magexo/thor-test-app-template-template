@@ -329,5 +329,11 @@
       "default_title": "Standardtittel",
       "sticky_add_to_cart": "Hurtiglinje for «Legg i handlekurv»"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "title": "Wishlist",
+    "count": "{{ count }} saved items"
   }
 }
