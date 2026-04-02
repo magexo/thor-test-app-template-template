@@ -39,6 +39,7 @@
     "search_results_no_results": "Nerasta jokių rezultatų pagal užklausą „{{ query }}“",
     "filters": "Filtrai",
     "account": "Paskyra",
+    "back_to_top": "Back to top",
     "cart": "Krepšelis",
     "cart_count": "Iš viso prekių krepšelyje",
     "filter_count": {

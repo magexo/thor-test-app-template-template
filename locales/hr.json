@@ -44,6 +44,7 @@
       "few": "Primijenjen je sljedeći broj filtara: {{ count }}"
     },
     "account": "Račun",
+    "back_to_top": "Back to top",
     "cart": "Košarica",
     "cart_count": "Ukupan broj stavki u košarici",
     "menu": "Izbornik",

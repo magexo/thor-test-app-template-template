@@ -44,6 +44,7 @@
       "few": "{{ count }} filtre aplicate"
     },
     "account": "Cont",
+    "back_to_top": "Back to top",
     "cart": "Coș",
     "cart_count": "Total articole în coș",
     "menu": "Meniu",

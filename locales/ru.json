@@ -39,6 +39,7 @@
     "search_results_no_results": "По запросу «{{ query }}» ничего не найдено",
     "filters": "Фильтры",
     "account": "Учетная запись",
+    "back_to_top": "Back to top",
     "cart": "Корзина",
     "cart_count": "Всего товаров в корзине",
     "filter_count": {

@@ -10,6 +10,7 @@
 {
   "accessibility": {
     "account": "Account",
+    "back_to_top": "Back to top",
     "cart": "Cart",
     "cart_count": "Total items in cart",
     "close_dialog": "Close dialog",

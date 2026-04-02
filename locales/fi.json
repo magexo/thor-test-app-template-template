@@ -43,6 +43,7 @@
       "other": "{{ count }} suodatinta käytössä"
     },
     "account": "Tili",
+    "back_to_top": "Back to top",
     "cart": "Ostoskori",
     "cart_count": "Tuotteita ostoskorissa yhteensä",
     "menu": "Valikko",

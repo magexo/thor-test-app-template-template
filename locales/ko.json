@@ -43,6 +43,7 @@
       "other": "{{ count }}개 필터 적용됨"
     },
     "account": "계정",
+    "back_to_top": "Back to top",
     "cart": "카트",
     "cart_count": "카트에 있는 총 품목 수",
     "menu": "메뉴",
