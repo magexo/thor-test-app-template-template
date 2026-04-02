@@ -27,4 +27,4 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh api repos/${{ github.repository_owner }}/gh-thorcore/dispatches             -f event_type=submodule-update             -f 'client_payload[repo]=${{ github.repository }}'             -f 'client_payload[sha]=${{ github.sha }}'
+          gh api repos/${{ github.repository_owner }}/gh-thorcore/dispatches             -f event_type=submodule-update             -f 'client_payload[repo]=${{ github.repository }}'             -f 'client_payload[sha]=${{ github.sha }}'             -f 'client_payload[branch]=${{ github.ref_name }}'
