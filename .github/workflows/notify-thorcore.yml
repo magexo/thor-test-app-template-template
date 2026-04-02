@@ -1,0 +1,30 @@
+# Notify thorcore when this repo merges to its default branch.
+# Triggers submodule pointer update relay to hubs via thorcore.
+# <!-- distributed by thorcore — do not edit manually -->
+name: Notify thorcore of merge
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate app token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.THORCORE_APP_ID }}
+          private-key: ${{ secrets.THORCORE_APP_PRIVATE_KEY }}
+          owner: magexo
+          repositories: gh-thorcore
+
+      - name: Notify thorcore
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh api repos/${{ github.repository_owner }}/gh-thorcore/dispatches             -f event_type=submodule-update             -f 'client_payload[repo]=${{ github.repository }}'             -f 'client_payload[sha]=${{ github.sha }}'
