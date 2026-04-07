@@ -304,7 +304,14 @@
       "quantity_maximum": "최대 {{ maximum }}개",
       "in_cart": "카트에 있음",
       "default_title": "기본 이름",
-      "sticky_add_to_cart": "빠른 카트 추가 바"
+      "sticky_add_to_cart": "빠른 카트 추가 바",
+      "notify_me": "Notify Me",
+      "notify_me_modal_title": "Notify me when available",
+      "notify_me_email_placeholder": "Enter your email address",
+      "notify_me_submit": "Notify Me",
+      "notify_me_success": "You'll be notified when this item is back in stock!",
+      "notify_me_error": "Something went wrong. Please try again.",
+      "notify_me_invalid_email": "Please enter a valid email address."
     }
   },
   "fields": {

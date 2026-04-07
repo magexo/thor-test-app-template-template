@@ -1,0 +1,67 @@
+{%- doc -%}
+  Back in stock notification modal.
+  Rendered once per product form; JS drives open/close state.
+
+  @param {string} section_id - Section ID used to make the dialog ID unique on the page.
+{%- enddoc -%}
+
+<dialog
+  id="back-in-stock-dialog-{{ section_id }}"
+  class="back-in-stock-modal dialog-modal"
+  aria-modal="true"
+  aria-labelledby="back-in-stock-title-{{ section_id }}"
+>
+  <div class="back-in-stock-modal__inner">
+    <div class="back-in-stock-modal__header">
+      <h2
+        id="back-in-stock-title-{{ section_id }}"
+        class="back-in-stock-modal__title"
+      >
+        {{- 'products.product.notify_me_modal_title' | t -}}
+      </h2>
+      <button
+        type="button"
+        class="back-in-stock-modal__close button-unstyled"
+        data-back-in-stock-close
+        aria-label="{{ 'actions.close' | t }}"
+      >
+        <span class="svg-wrapper">
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </span>
+      </button>
+    </div>
+
+    <form class="back-in-stock-modal__form" data-back-in-stock-form novalidate>
+      <div class="back-in-stock-modal__field">
+        <label
+          for="back-in-stock-email-{{ section_id }}"
+          class="back-in-stock-modal__label"
+        >
+          {{- 'customers.login.email' | t -}}
+        </label>
+        <input
+          id="back-in-stock-email-{{ section_id }}"
+          type="email"
+          name="email"
+          class="back-in-stock-modal__input"
+          placeholder="{{ 'products.product.notify_me_email_placeholder' | t }}"
+          autocomplete="email"
+          required
+        >
+        <p
+          class="back-in-stock-modal__error hidden"
+          role="alert"
+          data-back-in-stock-error
+        ></p>
+      </div>
+
+      <button
+        type="submit"
+        class="button back-in-stock-modal__submit"
+        data-back-in-stock-submit
+      >
+        {{- 'products.product.notify_me_submit' | t -}}
+      </button>
+    </form>
+  </div>
+</dialog>

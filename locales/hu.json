@@ -327,7 +327,14 @@
       "quantity_maximum": "Maximum: {{ maximum }}",
       "in_cart": "a kosárban",
       "default_title": "Alapértelmezett cím",
-      "sticky_add_to_cart": "Gyors hozzáadás a kosárhoz sáv"
+      "sticky_add_to_cart": "Gyors hozzáadás a kosárhoz sáv",
+      "notify_me": "Notify Me",
+      "notify_me_modal_title": "Notify me when available",
+      "notify_me_email_placeholder": "Enter your email address",
+      "notify_me_submit": "Notify Me",
+      "notify_me_success": "You'll be notified when this item is back in stock!",
+      "notify_me_error": "Something went wrong. Please try again.",
+      "notify_me_invalid_email": "Please enter a valid email address."
     }
   }
 }

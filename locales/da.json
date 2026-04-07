@@ -304,7 +304,14 @@
       "quantity_maximum": "Maksimum på {{ maximum }}",
       "in_cart": "i indkøbskurv",
       "default_title": "Standardtitel",
-      "sticky_add_to_cart": "Bjælken “Læg hurtigt i indkøbskurv”"
+      "sticky_add_to_cart": "Bjælken “Læg hurtigt i indkøbskurv”",
+      "notify_me": "Notify Me",
+      "notify_me_modal_title": "Notify me when available",
+      "notify_me_email_placeholder": "Enter your email address",
+      "notify_me_submit": "Notify Me",
+      "notify_me_success": "You'll be notified when this item is back in stock!",
+      "notify_me_error": "Something went wrong. Please try again.",
+      "notify_me_invalid_email": "Please enter a valid email address."
     }
   },
   "fields": {

@@ -15,6 +15,7 @@
 
   assign can_add_to_cart = false
   assign add_to_cart_text = 'products.product.unavailable' | t
+  assign is_sold_out = false
 
   if variant
     if variant.quantity_rule.min > variant.inventory_quantity and inventory_managed and inventory_policy == 'deny'
@@ -27,6 +28,7 @@
     elsif inventory_managed and inventory_quantity <= 0 and inventory_policy == 'deny' or quantity_rule_soldout
       assign can_add_to_cart = false
       assign add_to_cart_text = 'products.product.sold_out' | t
+      assign is_sold_out = true
     else
       assign can_add_to_cart = false
       assign add_to_cart_text = 'products.product.unavailable' | t
@@ -215,12 +217,39 @@
             </span>
           {%- endunless -%}
 
-          {% content_for 'block',
-            type: 'add-to-cart',
-            id: 'add-to-cart',
-            can_add_to_cart: can_add_to_cart,
-            add_to_cart_text: add_to_cart_text
-          %}
+          <span
+            class="add-to-cart-wrapper"
+            data-add-to-cart-wrapper
+            {% if is_sold_out %}hidden{% endif %}
+          >
+            {% content_for 'block',
+              type: 'add-to-cart',
+              id: 'add-to-cart',
+              can_add_to_cart: can_add_to_cart,
+              add_to_cart_text: add_to_cart_text
+            %}
+          </span>
+
+          {%- assign bis_dialog_id = 'back-in-stock-dialog-' | append: section.id -%}
+          <back-in-stock-signup
+            data-section-id="{{ section.id }}"
+            data-product-id="{{ product.id }}"
+            data-variant-sku="{{ variant.sku | default: variant.id }}"
+            data-variant-id="{{ variant.id }}"
+            data-dialog-id="{{ bis_dialog_id }}"
+            data-i18n-notify_me_invalid_email="{{ 'products.product.notify_me_invalid_email' | t | escape }}"
+            data-i18n-notify_me_success="{{ 'products.product.notify_me_success' | t | escape }}"
+            data-i18n-notify_me_error="{{ 'products.product.notify_me_error' | t | escape }}"
+            {% unless is_sold_out %}hidden{% endunless %}
+          >
+            <button
+              type="button"
+              class="button back-in-stock-notify-btn"
+              data-back-in-stock-trigger
+            >
+              {{- 'products.product.notify_me' | t -}}
+            </button>
+          </back-in-stock-signup>
 
           {% content_for 'block',
             type: 'accelerated-checkout',
@@ -231,6 +260,11 @@
         </div>
       {%- endform -%}
     </product-form-component>
+
+    {%- render 'back-in-stock-modal', section_id: section.id -%}
+
+    <script src="{{ 'back-in-stock.js' | asset_url }}" type="module"></script>
+    {{ 'back-in-stock.css' | asset_url | stylesheet_tag }}
   {%- else -%}
     <div class="product-form-buttons">
       <button

@@ -304,7 +304,14 @@
       "quantity_maximum": "最多 {{ maximum }} 个",
       "in_cart": "在购物车中",
       "default_title": "默认标题",
-      "sticky_add_to_cart": "快速添加到购物车栏"
+      "sticky_add_to_cart": "快速添加到购物车栏",
+      "notify_me": "Notify Me",
+      "notify_me_modal_title": "Notify me when available",
+      "notify_me_email_placeholder": "Enter your email address",
+      "notify_me_submit": "Notify Me",
+      "notify_me_success": "You'll be notified when this item is back in stock!",
+      "notify_me_error": "Something went wrong. Please try again.",
+      "notify_me_invalid_email": "Please enter a valid email address."
     }
   },
   "fields": {

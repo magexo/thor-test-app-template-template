@@ -304,7 +304,14 @@
       "quantity_maximum": "จำนวนสูงสุดคือ {{ maximum }}",
       "in_cart": "ในตะกร้าสินค้า",
       "default_title": "ชื่อเริ่มต้น",
-      "sticky_add_to_cart": "แถบเพิ่มลงในตะกร้าสินค้าแบบด่วน"
+      "sticky_add_to_cart": "แถบเพิ่มลงในตะกร้าสินค้าแบบด่วน",
+      "notify_me": "Notify Me",
+      "notify_me_modal_title": "Notify me when available",
+      "notify_me_email_placeholder": "Enter your email address",
+      "notify_me_submit": "Notify Me",
+      "notify_me_success": "You'll be notified when this item is back in stock!",
+      "notify_me_error": "Something went wrong. Please try again.",
+      "notify_me_invalid_email": "Please enter a valid email address."
     }
   },
   "fields": {
