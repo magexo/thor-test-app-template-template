@@ -90,3 +90,7 @@ We are not accepting contributions to Horizon at this time.
 ## License
 
 Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+
+## Test runs
+
+- 2026-04-21: AC coverage gate canary (WORKT-63)
