@@ -90,3 +90,4 @@ We are not accepting contributions to Horizon at this time.
 ## License
 
 Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+<!-- pipeline-canary: adf-fix-2026-05-19 -->
