@@ -76,10 +76,17 @@ export class MxWishlist {
 }
 
 class MxWishlistButton extends Component {
+  #onWishlistUpdate = () => this.#syncState();
+
   connectedCallback() {
     super.connectedCallback();
     this.#syncState();
-    document.addEventListener(WISHLIST_UPDATE_EVENT, () => this.#syncState());
+    document.addEventListener(WISHLIST_UPDATE_EVENT, this.#onWishlistUpdate);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback?.();
+    document.removeEventListener(WISHLIST_UPDATE_EVENT, this.#onWishlistUpdate);
   }
 
   handleToggle() {
@@ -111,11 +118,20 @@ if (!customElements.get('mx-wishlist-button')) {
 class MxWishlistPage extends Component {
   connectedCallback() {
     super.connectedCallback();
+    this._initGen = 0;
+    this._onWishlistUpdate = () => this.#init();
     this.#init();
-    document.addEventListener(WISHLIST_UPDATE_EVENT, () => this.#init());
+    document.addEventListener(WISHLIST_UPDATE_EVENT, this._onWishlistUpdate);
+  }
+
+  disconnectedCallback() {
+    this._initGen++;
+    document.removeEventListener(WISHLIST_UPDATE_EVENT, this._onWishlistUpdate);
   }
 
   async #init() {
+    const gen = ++this._initGen;
+
     const listParam = new URLSearchParams(window.location.search).get('list');
     const isShared = listParam !== null;
     const handles = isShared ? MxWishlist.decodeShareParam(listParam) : MxWishlist.getItems();
@@ -145,19 +161,23 @@ class MxWishlistPage extends Component {
 
     if (empty) empty.hidden = true;
     grid.hidden = false;
-    if (countEl) countEl.textContent = String(handles.length);
 
     grid.innerHTML = '<div class="mx-wishlist-page__loading" aria-live="polite"></div>';
 
     const products = await Promise.all(handles.map((h) => this.#fetchProduct(h)));
 
+    if (gen !== this._initGen) return;
+
+    let rendered = 0;
     grid.innerHTML = '';
     products.forEach((product, i) => {
       if (!product) return;
+      rendered++;
       const handle = handles[i];
       const card = this.#buildCard(product, handle, isShared);
       grid.appendChild(card);
     });
+    if (countEl) countEl.textContent = String(rendered);
   }
 
   async #fetchProduct(handle) {
@@ -182,11 +202,11 @@ class MxWishlistPage extends Component {
     const price = this.#formatMoney(product.price);
 
     item.innerHTML = `
-      <a class="mx-wishlist-card__image-link" href="/products/${handle}" aria-label="${this.#escape(product.title)}">
-        ${imageUrl ? `<img class="mx-wishlist-card__image" src="${imageUrl}" alt="${this.#escape(product.title)}" loading="lazy" width="200" height="200">` : '<div class="mx-wishlist-card__image-placeholder"></div>'}
+      <a class="mx-wishlist-card__image-link" href="/products/${this.#escape(handle)}" aria-label="${this.#escape(product.title)}">
+        ${imageUrl ? `<img class="mx-wishlist-card__image" src="${this.#escape(imageUrl)}" alt="${this.#escape(product.title)}" loading="lazy" width="200" height="200">` : '<div class="mx-wishlist-card__image-placeholder"></div>'}
       </a>
       <div class="mx-wishlist-card__info">
-        <a class="mx-wishlist-card__title" href="/products/${handle}">${this.#escape(product.title)}</a>
+        <a class="mx-wishlist-card__title" href="/products/${this.#escape(handle)}">${this.#escape(product.title)}</a>
         <span class="mx-wishlist-card__price">${price}</span>
       </div>
       ${!isShared ? `<button class="mx-wishlist-card__remove button-unstyled" data-remove="${this.#escape(handle)}" aria-label="${this.#escape(this.getAttribute('data-label-remove') || 'Remove')}">
@@ -199,6 +219,16 @@ class MxWishlistPage extends Component {
       if (removeBtn) {
         removeBtn.addEventListener('click', () => {
           MxWishlist.removeItem(handle);
+          item.remove();
+          const countEl = this.querySelector('[data-wishlist-count]');
+          const remaining = this.querySelectorAll('.mx-wishlist-card').length;
+          if (countEl) countEl.textContent = String(remaining);
+          if (remaining === 0) {
+            const grid = this.querySelector('[data-wishlist-grid]');
+            const empty = this.querySelector('[data-wishlist-empty]');
+            if (grid) grid.hidden = true;
+            if (empty) empty.hidden = false;
+          }
           document.dispatchEvent(new CustomEvent(WISHLIST_UPDATE_EVENT, { bubbles: true }));
         });
       }
@@ -224,6 +254,8 @@ class MxWishlistPage extends Component {
         msg.hidden = false;
         setTimeout(() => { msg.hidden = true; }, 3000);
       }
+    }).catch(() => {
+      prompt('Copy this link to share your wishlist:', url);
     });
   }
 }
