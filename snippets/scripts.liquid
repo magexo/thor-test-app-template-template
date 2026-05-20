@@ -274,6 +274,10 @@
     href="{{ 'mx-compare.css' | asset_url }}"
     media="all"
   >
+  <script type="module">
+    import { MxCompare } from '@theme/mx-compare';
+    MxCompare.setMax({{ settings.compare_max_products | default: 4 }});
+  </script>
   <script
     src="{{ 'mx-compare-button.js' | asset_url }}"
     type="module"
@@ -284,10 +288,6 @@
     type="module"
     fetchpriority="low"
   ></script>
-  <script type="module">
-    import { MxCompare } from '@theme/mx-compare';
-    MxCompare.setMax({{ settings.compare_max_products | default: 4 }});
-  </script>
 {% endif %}
 
 <script

@@ -48,7 +48,11 @@
   async function fetchProduct(handle) {
     const res = await fetch(`/products/${handle}.js`);
     if (!res.ok) return null;
-    return res.json();
+    try {
+      return await res.json();
+    } catch {
+      return null;
+    }
   }
 
   function formatMoney(cents) {
@@ -89,14 +93,34 @@
   function getCellContent(product, key) {
     switch (key) {
       case 'image': return '';
-      case 'title': return `<a href="${product.url}" class="mx-compare__product-title">${product.title}</a>`;
+      case 'title': {
+        const a = document.createElement('a');
+        a.href = product.url;
+        a.className = 'mx-compare__product-title';
+        a.textContent = product.title;
+        return a.outerHTML;
+      }
       case 'price': return `<span class="mx-compare__price">${formatMoney(product.price)}</span>`;
-      case 'vendor': return product.vendor || '—';
+      case 'vendor': {
+        const span = document.createElement('span');
+        span.textContent = product.vendor || '—';
+        return span.outerHTML;
+      }
       case 'availability': {
         const available = product.available;
         return `<span class="mx-compare__availability mx-compare__availability--${available ? 'available' : 'unavailable'}">${available ? T.available : T.unavailable}</span>`;
       }
-      case 'description': return `<div class="mx-compare__description">${product.description || '—'}</div>`;
+      case 'description': {
+        const tpl = document.createElement('template');
+        tpl.innerHTML = product.description || '';
+        tpl.content.querySelectorAll('script').forEach((s) => s.remove());
+        tpl.content.querySelectorAll('*').forEach((el) => {
+          [...el.attributes].forEach((attr) => {
+            if (/^on/i.test(attr.name)) el.removeAttribute(attr.name);
+          });
+        });
+        return `<div class="mx-compare__description">${tpl.innerHTML || '—'}</div>`;
+      }
       default: return '—';
     }
   }
@@ -152,7 +176,9 @@
     return card;
   }
 
+  let _renderVersion = 0;
   async function renderPage() {
+    const version = ++_renderVersion;
     const loadingEl = document.getElementById('mx-compare-loading');
     const emptyEl = document.getElementById('mx-compare-empty');
     const tableWrapper = document.getElementById('mx-compare-table-wrapper');
@@ -180,6 +206,7 @@
     cardsEl.hidden = true;
 
     const products = await Promise.all(handles.map((h) => h === '__preview__' ? null : fetchProduct(h)));
+    if (version !== _renderVersion) return;
     const validProducts = products.filter(Boolean);
 
     loadingEl.hidden = true;

@@ -34,8 +34,8 @@ class MxCompareBar extends HTMLElement {
     if (countEl) {
       const template = countEl.dataset.template || '';
       countEl.textContent = template
-        .replace('{{ count }}', String(count))
-        .replace('{{ max }}', String(max));
+        .replace('{count}', String(count))
+        .replace('{max}', String(max));
     }
     const compareBtn = this.querySelector('[data-compare-now]');
     if (compareBtn) compareBtn.disabled = count < 2;
