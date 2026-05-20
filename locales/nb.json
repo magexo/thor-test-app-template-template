@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }} for {{ parent_title }}",
     "remove": "Fjern",
     "view_pricing_info": "Se prisinformasjon",
+    "back_to_top": "Tilbake til toppen",
     "open_hotspot": "Åpne tilgangspunkt",
     "slideshow": "Lysbildefremvisning",
     "header_navigation_label": "Primær"

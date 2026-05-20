@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }} สำหรับ {{ parent_title }}",
     "remove": "ลบ",
     "view_pricing_info": "ดูข้อมูลการกำหนดราคา",
+    "back_to_top": "กลับไปด้านบน",
     "open_hotspot": "เปิดฮอตสปอต",
     "slideshow": "สไลด์โชว์",
     "header_navigation_label": "หลัก"

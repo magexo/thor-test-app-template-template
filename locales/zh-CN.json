@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }}（{{ parent_title }}）",
     "remove": "删除",
     "view_pricing_info": "查看定价信息",
+    "back_to_top": "返回顶部",
     "open_hotspot": "打开热点",
     "slideshow": "幻灯片",
     "header_navigation_label": "主要"

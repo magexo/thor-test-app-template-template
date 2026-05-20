@@ -65,6 +65,7 @@
     "nested_product": "{{ product_title }} para {{ parent_title }}",
     "remove": "Eliminar",
     "view_pricing_info": "Ver la información de fijación de precios",
+    "back_to_top": "Volver arriba",
     "open_hotspot": "Abrir el punto de acceso",
     "slideshow": "Presentación de diapositivas",
     "header_navigation_label": "Principal"

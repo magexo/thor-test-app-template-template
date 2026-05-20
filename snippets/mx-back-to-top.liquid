@@ -1,0 +1,89 @@
+{%- doc -%}
+  Renders a "Back to top" button fixed at the bottom-right of the viewport.
+  Visible only after scrolling past 500px. Only intended for product pages.
+
+  @example
+  {% render 'mx-back-to-top' %}
+{%- enddoc -%}
+
+<button
+  class="mx-back-to-top"
+  aria-label="{{ 'accessibility.back_to_top' | t }}"
+  hidden
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M10 3L3 10h4v7h6v-7h4L10 3z"
+      fill="currentColor"
+    />
+  </svg>
+</button>
+
+{% stylesheet %}
+  .mx-back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-button-background);
+    color: var(--color-primary-button-text);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    padding: 0;
+  }
+
+  .mx-back-to-top--visible {
+    opacity: 1;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  (function () {
+    const btn = document.querySelector('.mx-back-to-top');
+    if (!btn) return;
+
+    const SCROLL_THRESHOLD = 500;
+    let ticking = false;
+
+    function updateVisibility() {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        btn.removeAttribute('hidden');
+        btn.classList.add('mx-back-to-top--visible');
+      } else {
+        btn.classList.remove('mx-back-to-top--visible');
+      }
+      ticking = false;
+    }
+
+    window.addEventListener(
+      'scroll',
+      function () {
+        if (!ticking) {
+          requestAnimationFrame(updateVisibility);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    btn.addEventListener('click', function () {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    });
+  })();
+{% endjavascript %}

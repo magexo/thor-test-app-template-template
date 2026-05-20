@@ -64,6 +64,7 @@
     "nested_product": "{{ parent_title }}向けの{{ product_title }}",
     "remove": "削除",
     "view_pricing_info": "価格情報を表示する",
+    "back_to_top": "トップへ戻る",
     "open_hotspot": "ホットスポットを開く",
     "slideshow": "スライドショー",
     "header_navigation_label": "プライマリー"

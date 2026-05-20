@@ -64,6 +64,7 @@
     "nested_product": "適用於 {{ parent_title }} 的 {{ product_title }}",
     "remove": "移除",
     "view_pricing_info": "檢視定價資訊",
+    "back_to_top": "返回頂部",
     "open_hotspot": "開啟熱點",
     "slideshow": "素材輪播",
     "header_navigation_label": "主要"

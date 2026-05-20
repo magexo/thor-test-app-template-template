@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }} – {{ parent_title }}",
     "remove": "Poista",
     "view_pricing_info": "Näytä hinnoittelutiedot",
+    "back_to_top": "Takaisin ylös",
     "open_hotspot": "Avoin yhteyspiste",
     "slideshow": "Diaesitys",
     "header_navigation_label": "Ensisijainen"

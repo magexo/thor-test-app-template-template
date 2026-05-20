@@ -65,6 +65,7 @@
     "nested_product": "{{ product_title }} pour {{ parent_title }}",
     "remove": "Retirer",
     "view_pricing_info": "Afficher les informations de tarification",
+    "back_to_top": "Retour en haut",
     "open_hotspot": "Ouvrir le point d’accès",
     "slideshow": "Diaporama",
     "header_navigation_label": "Principale"

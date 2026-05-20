@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }} voor {{ parent_title }}",
     "remove": "Verwijderen",
     "view_pricing_info": "Prijsinformatie bekijken",
+    "back_to_top": "Terug naar boven",
     "open_hotspot": "Hotspot openen",
     "slideshow": "Diavoorstelling",
     "header_navigation_label": "Primair"

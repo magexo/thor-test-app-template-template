@@ -64,6 +64,7 @@
     "nested_product": "{{ parent_title }} için {{ product_title }}",
     "remove": "Kaldır",
     "view_pricing_info": "Fiyatlandırma bilgilerini görüntüle",
+    "back_to_top": "Başa dön",
     "open_hotspot": "Etkin noktayı aç",
     "slideshow": "Slayt gösterisi",
     "header_navigation_label": "Birincil"

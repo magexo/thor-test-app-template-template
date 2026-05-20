@@ -66,6 +66,7 @@
     "nested_product": "{{ product_title }} pro {{ parent_title }}",
     "remove": "Odebrat",
     "view_pricing_info": "Zobrazit informace o cenách",
+    "back_to_top": "Zpět na začátek",
     "open_hotspot": "Otevřený hotspot",
     "slideshow": "Prezentace",
     "header_navigation_label": "Hlavní"

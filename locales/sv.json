@@ -64,6 +64,7 @@
     "nested_product": "{{ product_title }} för {{ parent_title }}",
     "remove": "Ta bort",
     "view_pricing_info": "Visa prissättningsinformation",
+    "back_to_top": "Tillbaka upp",
     "open_hotspot": "Öppna hotspot",
     "slideshow": "Bildspel",
     "header_navigation_label": "Primär"
