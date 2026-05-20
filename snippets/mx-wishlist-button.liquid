@@ -1,0 +1,39 @@
+{%- doc -%}
+  Renders a wishlist heart toggle button.
+
+  @param {object} product - The product object
+  @param {string} [variant] - "overlay" for product cards, "inline" for product pages (default: "inline")
+{%- enddoc -%}
+
+{%- if settings.enable_wishlist and product != blank -%}
+  {%- assign btn_variant = variant | default: 'inline' -%}
+  <mx-wishlist-button
+    data-product-handle="{{ product.handle }}"
+    data-label-add="{{ 'wishlist.add' | t | escape }}"
+    data-label-remove="{{ 'wishlist.remove' | t | escape }}"
+    data-active="false"
+  >
+    <button
+      type="button"
+      class="mx-wishlist-btn mx-wishlist-btn--{{ btn_variant }} button-unstyled"
+      aria-label="{{ 'wishlist.add' | t | escape }}"
+      aria-pressed="false"
+      on:click="/handleToggle"
+    >
+      <svg
+        class="mx-wishlist-btn__icon"
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 20 20"
+      >
+        {% render 'icon', icon: 'heart' %}
+      </svg>
+      {%- if btn_variant == 'inline' -%}
+        <span class="mx-wishlist-btn__label">{{ 'wishlist.add' | t }}</span>
+      {%- endif -%}
+    </button>
+  </mx-wishlist-button>
+{%- endif -%}

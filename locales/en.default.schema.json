@@ -746,7 +746,8 @@
     "wide": "Wide",
     "youtube": "YouTube",
     "with_hints": "With hints",
-    "below_media": "Below media"
+    "below_media": "Below media",
+    "wishlist": "Wishlist"
   },
   "settings": {
     "accordion": "Accordion",
@@ -1211,6 +1212,7 @@
     "welcome_to_our_store": "Welcome to our store",
     "what_is_return_policy": "What is the return policy?",
     "when_will_order_arrive": "When will I get my order?",
-    "where_are_products_made": "Where are your products manufactured?"
+    "where_are_products_made": "Where are your products manufactured?",
+    "enable_wishlist": "Enable wishlist"
   }
 }

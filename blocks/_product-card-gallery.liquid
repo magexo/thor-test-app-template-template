@@ -27,6 +27,7 @@
     {%  if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add', product: product, section_id: section.id %}
     {% endif %}
+    {% render 'mx-wishlist-button', product: product, variant: 'overlay' %}
   {% endunless %}
 {% endcapture %}
 

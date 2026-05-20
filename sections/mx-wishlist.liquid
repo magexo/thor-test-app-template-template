@@ -1,0 +1,140 @@
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="section section--page-width spacing-style color-{{ section.settings.color_scheme }}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <mx-wishlist-page
+    class="mx-wishlist-page"
+    data-label-remove="{{ 'wishlist.remove' | t | escape }}"
+  >
+    <div
+      class="mx-wishlist-page__shared-banner"
+      data-wishlist-shared-banner
+      hidden
+    >
+      {{ 'wishlist.shared_view_notice' | t }}
+    </div>
+
+    <div class="mx-wishlist-page__header">
+      <h1 class="h2">{{ 'wishlist.page_title' | t }}</h1>
+      <span
+        class="mx-wishlist-page__count"
+        data-wishlist-count
+        aria-live="polite"
+      ></span>
+    </div>
+
+    <div
+      class="mx-wishlist-page__share"
+      data-wishlist-share
+    >
+      <button
+        type="button"
+        class="mx-wishlist-page__copy-btn"
+        on:click="/handleCopyLink"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M8.5 3.5H5C4.17 3.5 3.5 4.17 3.5 5v10c0 .83.67 1.5 1.5 1.5h10c.83 0 1.5-.67 1.5-1.5v-3.5M11.5 3.5H16.5M16.5 3.5V8.5M16.5 3.5L9 11"
+            stroke="currentColor"
+            stroke-width="1.2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        {{ 'wishlist.copy_link' | t }}
+      </button>
+      <span
+        class="mx-wishlist-page__copy-success"
+        data-copy-success
+        hidden
+      >
+        {{ 'wishlist.link_copied' | t }}
+      </span>
+    </div>
+
+    <div
+      class="mx-wishlist-page__empty"
+      data-wishlist-empty
+      hidden
+    >
+      <svg
+        class="mx-wishlist-page__empty-icon"
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+        viewBox="0 0 20 20"
+      >
+        {% render 'icon', icon: 'heart' %}
+      </svg>
+      <p class="mx-wishlist-page__empty-title h4">{{ 'wishlist.empty_title' | t }}</p>
+      <p class="mx-wishlist-page__empty-message">{{ 'wishlist.empty_message' | t }}</p>
+      <a
+        href="{{ routes.all_products_collection_url }}"
+        class="button"
+      >
+        {{ 'wishlist.continue_shopping' | t }}
+      </a>
+    </div>
+
+    <div
+      class="mx-wishlist-page__grid"
+      data-wishlist-grid
+      hidden
+    ></div>
+  </mx-wishlist-page>
+</div>
+
+{% schema %}
+{
+  "name": "t:names.wishlist",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.wishlist"
+    }
+  ]
+}
+{% endschema %}

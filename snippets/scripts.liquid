@@ -25,7 +25,8 @@
       "@theme/component-quantity-selector": "{{ 'component-quantity-selector.js' | asset_url }}",
       "@theme/comparison-slider": "{{ 'comparison-slider.js' | asset_url }}",
       "@theme/sticky-add-to-cart": "{{ 'sticky-add-to-cart.js' | asset_url }}",
-      "@theme/fly-to-cart": "{{ 'fly-to-cart.js' | asset_url }}"
+      "@theme/fly-to-cart": "{{ 'fly-to-cart.js' | asset_url }}",
+      "@theme/mx-wishlist": "{{ 'mx-wishlist.js' | asset_url }}"
     }
   }
 </script>
@@ -265,6 +266,20 @@
     import { RecentlyViewed } from '@theme/recently-viewed-products';
     RecentlyViewed.addProduct('{{ product.id }}');
   </script>
+{% endif %}
+
+{% if settings.enable_wishlist %}
+  <link
+    rel="stylesheet"
+    href="{{ 'mx-wishlist.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'"
+  >
+  <script
+    src="{{ 'mx-wishlist.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
 {% endif %}
 
 <script

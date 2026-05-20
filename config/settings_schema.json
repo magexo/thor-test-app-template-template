@@ -2287,5 +2287,16 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "t:names.wishlist",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_wishlist",
+        "label": "t:settings.enable_wishlist",
+        "default": true
+      }
+    ]
   }
 ]

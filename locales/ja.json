@@ -329,5 +329,17 @@
       "success_moderated": "コメントを投稿しました。承認待ちです",
       "success": "コメントを投稿しました"
     }
+  },
+  "wishlist": {
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist",
+    "page_title": "Wishlist",
+    "empty_title": "Your wishlist is empty",
+    "empty_message": "Save your favourite products here.",
+    "continue_shopping": "Continue shopping",
+    "copy_link": "Share wishlist",
+    "link_copied": "Link copied!",
+    "shared_view_notice": "You are viewing a shared wishlist.",
+    "shared_title": "Shared wishlist"
   }
 }
