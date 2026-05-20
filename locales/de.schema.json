@@ -188,7 +188,9 @@
     "product_hotspots": "Produkt-Hotspots",
     "hotspot_product": "Hotspot",
     "product_sku": "SKU",
-    "layered_slideshow": "Überlagerte Slideshow"
+    "layered_slideshow": "Überlagerte Slideshow",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "autoplay": "Autoplay",
@@ -578,7 +580,9 @@
     "y_position": "Vertikale Position",
     "enable_sticky_add_to_cart": "Fixierte Leiste „In den Warenkorb“",
     "sticky_add_to_cart": "Fixierte Schaltfläche „In den Warenkorb“",
-    "actions_display_style": "Menüstil"
+    "actions_display_style": "Menüstil",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apfel",

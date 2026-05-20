@@ -188,7 +188,9 @@
     "product_hotspots": "Produkthotspots",
     "hotspot_product": "Hotspot",
     "product_sku": "SKU",
-    "layered_slideshow": "Diasshow i lag"
+    "layered_slideshow": "Diasshow i lag",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "alignment": "Justering",
@@ -578,7 +580,9 @@
     "y_position": "Lodret position",
     "enable_sticky_add_to_cart": "Fastgjort bjælke med 'Læg i kurv'",
     "sticky_add_to_cart": "Fastgjort 'Læg i kurv'",
-    "actions_display_style": "Menustil"
+    "actions_display_style": "Menustil",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

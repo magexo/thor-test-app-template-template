@@ -188,7 +188,9 @@
     "product_hotspots": "Zones réactives de produit",
     "hotspot_product": "Zone réactive",
     "product_sku": "SKU",
-    "layered_slideshow": "Diaporama superposé"
+    "layered_slideshow": "Diaporama superposé",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "autoplay": "Lecture automatique",
@@ -578,7 +580,9 @@
     "y_position": "Position verticale",
     "enable_sticky_add_to_cart": "Barre d’ajout au panier flottante",
     "sticky_add_to_cart": "Ajout au panier flottant",
-    "actions_display_style": "Style de menu"
+    "actions_display_style": "Style de menu",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Pomme",

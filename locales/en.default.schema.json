@@ -435,7 +435,9 @@
     "view_all_button": "View all",
     "pills": "Pills",
     "comparison_slider": "Comparison slider"
-  },
+  ,
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"},
   "options": {
     "above_carousel": "Above carousel",
     "accent": "Accent",
@@ -1175,7 +1177,9 @@
     "text_on_images": "Text on images",
     "x_position": "Horizontal position",
     "y_position": "Vertical position"
-  },
+  ,
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"},
   "text_defaults": {
     "accordion_heading": "Accordion heading",
     "are_purchases_final_sale": "Are any purchases final sale?",
@@ -1213,4 +1217,5 @@
     "when_will_order_arrive": "When will I get my order?",
     "where_are_products_made": "Where are your products manufactured?"
   }
+
 }

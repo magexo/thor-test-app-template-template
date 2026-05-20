@@ -25,7 +25,8 @@
       "@theme/component-quantity-selector": "{{ 'component-quantity-selector.js' | asset_url }}",
       "@theme/comparison-slider": "{{ 'comparison-slider.js' | asset_url }}",
       "@theme/sticky-add-to-cart": "{{ 'sticky-add-to-cart.js' | asset_url }}",
-      "@theme/fly-to-cart": "{{ 'fly-to-cart.js' | asset_url }}"
+      "@theme/fly-to-cart": "{{ 'fly-to-cart.js' | asset_url }}",
+      "@theme/mx-compare": "{{ 'mx-compare.js' | asset_url }}"
     }
   }
 </script>
@@ -264,6 +265,28 @@
   <script type="module">
     import { RecentlyViewed } from '@theme/recently-viewed-products';
     RecentlyViewed.addProduct('{{ product.id }}');
+  </script>
+{% endif %}
+
+{% if settings.enable_product_compare %}
+  <link
+    rel="stylesheet"
+    href="{{ 'mx-compare.css' | asset_url }}"
+    media="all"
+  >
+  <script
+    src="{{ 'mx-compare-button.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+  <script
+    src="{{ 'mx-compare-bar.js' | asset_url }}"
+    type="module"
+    fetchpriority="low"
+  ></script>
+  <script type="module">
+    import { MxCompare } from '@theme/mx-compare';
+    MxCompare.setMax({{ settings.compare_max_products | default: 4 }});
   </script>
 {% endif %}
 

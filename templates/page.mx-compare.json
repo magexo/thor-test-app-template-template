@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "mx-compare-products",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

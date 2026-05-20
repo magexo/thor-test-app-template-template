@@ -1,0 +1,36 @@
+{%- doc -%}
+  Renders the floating compare bar shown at the bottom of the page when products are in the comparison list.
+{%- enddoc -%}
+
+{%- if settings.enable_product_compare -%}
+  {%- assign compare_page_url = pages['compare'] -%}
+  {%- assign compare_url = compare_page_url.url | default: '/pages/compare' -%}
+
+  <mx-compare-bar
+    class="mx-compare-bar"
+    data-compare-url="{{ compare_url }}"
+    hidden
+  >
+    <span
+      class="mx-compare-bar__count"
+      data-compare-count
+      data-template="{{ 'content.compare.products_selected' | t: count: '__count__', max: '__max__' | replace: '__count__', '{{ count }}' | replace: '__max__', '{{ max }}' }}"
+    >
+    </span>
+    <div class="mx-compare-bar__actions">
+      <button
+        class="mx-compare-bar__compare-btn"
+        data-compare-now
+        disabled
+      >
+        {{ 'content.compare.compare_now' | t }}
+      </button>
+      <button
+        class="mx-compare-bar__clear-btn"
+        data-clear-all
+      >
+        {{ 'content.compare.clear_all' | t }}
+      </button>
+    </div>
+  </mx-compare-bar>
+{%- endif -%}

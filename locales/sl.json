@@ -274,6 +274,27 @@
       "other": "Toliko izdelkov je dodanih v košarico: {{ count }}",
       "few": "Toliko izdelkov je dodanih v košarico: {{ count }}",
       "two": "Toliko izdelkov je dodanih v košarico: {{ count }}"
+    },
+    "compare": {
+      "add": "Add to compare",
+      "added": "Added",
+      "compare_now": "Compare now",
+      "clear_all": "Clear all",
+      "remove": "Remove",
+      "empty_title": "No products to compare",
+      "empty_message": "Add products from our catalog to compare them side by side.",
+      "browse_catalog": "Browse catalog",
+      "products_selected": "{{ count }} of {{ max }} products",
+      "page_title": "Compare Products",
+      "loading": "Loading products...",
+      "image": "Image",
+      "title": "Title",
+      "price": "Price",
+      "vendor": "Vendor",
+      "availability": "Availability",
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "description": "Description"
     }
   },
   "gift_cards": {

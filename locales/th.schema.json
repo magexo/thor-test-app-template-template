@@ -188,7 +188,9 @@
     "product_hotspots": "ฮอตสปอตสินค้า",
     "hotspot_product": "ฮอตสปอต",
     "product_sku": "SKU",
-    "layered_slideshow": "สไลด์โชว์แบบซ้อน"
+    "layered_slideshow": "สไลด์โชว์แบบซ้อน",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "alignment": "การจัดตำแหน่ง",
@@ -578,7 +580,9 @@
     "y_position": "ตำแหน่งแนวตั้ง",
     "enable_sticky_add_to_cart": "แถบเพิ่มลงในตะกร้าสินค้าแบบตรึง",
     "sticky_add_to_cart": "เพิ่มลงในตะกร้าสินค้าแบบตรึง",
-    "actions_display_style": "รูปแบบเมนู"
+    "actions_display_style": "รูปแบบเมนู",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

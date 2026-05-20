@@ -188,7 +188,9 @@
     "product_hotspots": "Puntos interactivos del producto",
     "hotspot_product": "Punto interactivo",
     "product_sku": "SKU",
-    "layered_slideshow": "Presentación de diapositivas en capas"
+    "layered_slideshow": "Presentación de diapositivas en capas",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "alignment": "Alineación",
@@ -578,7 +580,9 @@
     "y_position": "Posición vertical",
     "enable_sticky_add_to_cart": "Barra fija de agregar al carrito",
     "sticky_add_to_cart": "Agregar al carrito fijo",
-    "actions_display_style": "Estilo del menú"
+    "actions_display_style": "Estilo del menú",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

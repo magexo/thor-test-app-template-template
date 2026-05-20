@@ -1,0 +1,17 @@
+{%- doc -%}
+  Renders an "Add to Compare" button for a product.
+
+  @param {object} product - The product object
+{%- enddoc -%}
+
+{%- if settings.enable_product_compare and product != blank and product.id != empty -%}
+  <mx-compare-button
+    class="mx-compare-button"
+    data-product-handle="{{ product.handle }}"
+    data-label-add="{{ 'content.compare.add' | t }}"
+    data-label-added="{{ 'content.compare.added' | t }}"
+  >
+    <span data-compare-icon hidden aria-hidden="true">&#10003;</span>
+    <span data-compare-label>{{ 'content.compare.add' | t }}</span>
+  </mx-compare-button>
+{%- endif -%}

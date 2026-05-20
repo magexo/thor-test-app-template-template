@@ -188,7 +188,9 @@
     "product_hotspots": "商品ホットスポット",
     "hotspot_product": "ホットスポット",
     "product_sku": "SKU",
-    "layered_slideshow": "レイヤースライドショー"
+    "layered_slideshow": "レイヤースライドショー",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "alignment": "配置",
@@ -578,7 +580,9 @@
     "y_position": "縦位置",
     "enable_sticky_add_to_cart": "固定「カートに追加」バー",
     "sticky_add_to_cart": "固定「カートに追加」",
-    "actions_display_style": "メニュースタイル"
+    "actions_display_style": "メニュースタイル",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

@@ -188,7 +188,9 @@
     "product_hotspots": "Producthotspots",
     "hotspot_product": "Hotspot",
     "product_sku": "SKU",
-    "layered_slideshow": "Gelaagde diavoorstelling"
+    "layered_slideshow": "Gelaagde diavoorstelling",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "autoplay": "Automatisch afspelen",
@@ -578,7 +580,9 @@
     "y_position": "Verticale positie",
     "enable_sticky_add_to_cart": "Vaste 'Toevoegen aan winkelwagen'-balk",
     "sticky_add_to_cart": "Vaste 'Toevoegen aan winkelwagen'-balk",
-    "actions_display_style": "Menustijl"
+    "actions_display_style": "Menustijl",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

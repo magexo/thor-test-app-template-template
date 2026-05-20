@@ -107,6 +107,9 @@
     "
   >
     {{ children }}
+    {%- unless onboarding -%}
+      {%- render 'mx-compare-button', product: product -%}
+    {%- endunless -%}
   </div>
 </product-card>
 

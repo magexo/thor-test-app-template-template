@@ -188,7 +188,9 @@
     "product_hotspots": "Hotspoty produktowe",
     "hotspot_product": "Hotspot",
     "product_sku": "SKU",
-    "layered_slideshow": "Warstwowy pokaz slajdów"
+    "layered_slideshow": "Warstwowy pokaz slajdów",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "autoplay": "Autoodtwarzanie",
@@ -578,7 +580,9 @@
     "y_position": "Pozycja pionowa",
     "enable_sticky_add_to_cart": "Przypięty pasek dodawania do koszyka",
     "sticky_add_to_cart": "Przypięte dodawanie do koszyka",
-    "actions_display_style": "Styl menu"
+    "actions_display_style": "Styl menu",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

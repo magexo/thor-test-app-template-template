@@ -188,7 +188,9 @@
     "product_hotspots": "Produkthotspots",
     "hotspot_product": "Hotspot",
     "product_sku": "Lagerhållningsenhet",
-    "layered_slideshow": "Bildspel med lager"
+    "layered_slideshow": "Bildspel med lager",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "alignment": "Justering",
@@ -578,7 +580,9 @@
     "y_position": "Vertikal position",
     "enable_sticky_add_to_cart": "Fast fält för ”Lägg till i varukorgen”",
     "sticky_add_to_cart": "Fast ”Lägg till i varukorgen”",
-    "actions_display_style": "Menystil"
+    "actions_display_style": "Menystil",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",

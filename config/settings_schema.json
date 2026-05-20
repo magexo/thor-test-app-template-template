@@ -1568,7 +1568,6 @@
         ],
         "default": "body"
       },
-
       {
         "type": "select",
         "id": "button_text_case_primary",
@@ -1625,7 +1624,6 @@
         ],
         "default": "body"
       },
-
       {
         "type": "select",
         "id": "button_text_case_secondary",
@@ -1764,7 +1762,6 @@
         "info": "t:info.checkout_buttons",
         "default": true
       },
-
       {
         "type": "url",
         "id": "empty_cart_button_link",
@@ -2285,6 +2282,26 @@
           }
         ],
         "default": "equal-width-buttons"
+      }
+    ]
+  },
+  {
+    "name": "t:names.product_compare",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_product_compare",
+        "label": "t:settings.enable_product_compare",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "compare_max_products",
+        "min": 2,
+        "max": 4,
+        "step": 1,
+        "label": "t:settings.compare_max_products",
+        "default": 4
       }
     ]
   }

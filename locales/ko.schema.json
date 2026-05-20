@@ -188,7 +188,9 @@
     "product_hotspots": "제품 핫스팟",
     "hotspot_product": "핫스팟",
     "product_sku": "SKU(재고 관리 코드)",
-    "layered_slideshow": "레이어드 슬라이드 쇼"
+    "layered_slideshow": "레이어드 슬라이드 쇼",
+    "product_compare": "Product Compare",
+    "compare_products": "Compare Products"
   },
   "settings": {
     "autoplay": "자동 재생",
@@ -578,7 +580,9 @@
     "y_position": "세로 위치",
     "enable_sticky_add_to_cart": "고정 카트 추가 바",
     "sticky_add_to_cart": "고정 카트 추가",
-    "actions_display_style": "메뉴 스타일"
+    "actions_display_style": "메뉴 스타일",
+    "enable_product_compare": "Enable product compare",
+    "compare_max_products": "Maximum products to compare"
   },
   "options": {
     "apple": "Apple",
