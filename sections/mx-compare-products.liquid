@@ -25,225 +25,28 @@
   <div class="mx-compare__cards" id="mx-compare-cards" hidden></div>
 </div>
 
+<script id="mx-compare-config" type="application/json">
+  {
+    "rows": [
+      { "key": "image",        "label": {{ 'content.compare.image'        | t | json }}, "showInCard": false },
+      { "key": "title",        "label": {{ 'content.compare.title'        | t | json }}, "showInCard": false },
+      { "key": "price",        "label": {{ 'content.compare.price'        | t | json }}, "showInCard": true },
+      { "key": "vendor",       "label": {{ 'content.compare.vendor'       | t | json }}, "showInCard": true },
+      { "key": "availability", "label": {{ 'content.compare.availability' | t | json }}, "showInCard": true },
+      { "key": "description",  "label": {{ 'content.compare.description'  | t | json }}, "showInCard": true }
+    ],
+    "translations": {
+      "remove":      {{ 'content.compare.remove'      | t | json }},
+      "available":   {{ 'content.compare.available'   | t | json }},
+      "unavailable": {{ 'content.compare.unavailable' | t | json }}
+    }
+  }
+</script>
+
 <script type="module">
-  import { MxCompare } from '{{ 'mx-compare.js' | asset_url }}';
-
-  const ATTR_ROWS = [
-    { key: 'image', label: {{ 'content.compare.image' | t | json }} },
-    { key: 'title', label: {{ 'content.compare.title' | t | json }} },
-    { key: 'price', label: {{ 'content.compare.price' | t | json }} },
-    { key: 'vendor', label: {{ 'content.compare.vendor' | t | json }} },
-    { key: 'availability', label: {{ 'content.compare.availability' | t | json }} },
-    { key: 'description', label: {{ 'content.compare.description' | t | json }} },
-  ];
-
-  const T = {
-    remove: {{ 'content.compare.remove' | t | json }},
-    available: {{ 'content.compare.available' | t | json }},
-    unavailable: {{ 'content.compare.unavailable' | t | json }},
-  };
-
-  const designMode = window.Shopify?.designMode;
-
-  async function fetchProduct(handle) {
-    const res = await fetch(`/products/${handle}.js`);
-    if (!res.ok) return null;
-    try {
-      return await res.json();
-    } catch {
-      return null;
-    }
-  }
-
-  function formatMoney(cents) {
-    return (cents / 100).toLocaleString(undefined, { style: 'currency', currency: window.Shopify?.currency?.active || 'USD' });
-  }
-
-  function buildHeaderCell(product) {
-    const th = document.createElement('th');
-    th.className = 'mx-compare__product-header';
-    const removeBtn = document.createElement('button');
-    removeBtn.className = 'mx-compare__product-remove';
-    removeBtn.setAttribute('aria-label', T.remove);
-    removeBtn.textContent = '×';
-    removeBtn.addEventListener('click', () => {
-      MxCompare.removeProduct(product.handle);
-      renderPage();
-    });
-    th.appendChild(removeBtn);
-
-    if (product.featured_image) {
-      const img = document.createElement('img');
-      img.src = product.featured_image;
-      img.alt = product.title;
-      img.className = 'mx-compare__product-image';
-      img.loading = 'lazy';
-      th.appendChild(img);
-    }
-
-    const titleLink = document.createElement('a');
-    titleLink.href = product.url;
-    titleLink.className = 'mx-compare__product-title';
-    titleLink.textContent = product.title;
-    th.appendChild(titleLink);
-
-    return th;
-  }
-
-  function getCellContent(product, key) {
-    switch (key) {
-      case 'image': return '';
-      case 'title': {
-        const a = document.createElement('a');
-        a.href = product.url;
-        a.className = 'mx-compare__product-title';
-        a.textContent = product.title;
-        return a.outerHTML;
-      }
-      case 'price': return `<span class="mx-compare__price">${formatMoney(product.price)}</span>`;
-      case 'vendor': {
-        const span = document.createElement('span');
-        span.textContent = product.vendor || '—';
-        return span.outerHTML;
-      }
-      case 'availability': {
-        const available = product.available;
-        return `<span class="mx-compare__availability mx-compare__availability--${available ? 'available' : 'unavailable'}">${available ? T.available : T.unavailable}</span>`;
-      }
-      case 'description': {
-        const tpl = document.createElement('template');
-        tpl.innerHTML = product.description || '';
-        tpl.content.querySelectorAll('script').forEach((s) => s.remove());
-        tpl.content.querySelectorAll('*').forEach((el) => {
-          [...el.attributes].forEach((attr) => {
-            if (/^on/i.test(attr.name)) el.removeAttribute(attr.name);
-          });
-        });
-        return `<div class="mx-compare__description">${tpl.innerHTML || '—'}</div>`;
-      }
-      default: return '—';
-    }
-  }
-
-  function buildCardRemoveBtn(handle) {
-    const btn = document.createElement('button');
-    btn.className = 'mx-compare__card-remove';
-    btn.setAttribute('aria-label', T.remove);
-    btn.textContent = '×';
-    btn.addEventListener('click', () => {
-      MxCompare.removeProduct(handle);
-      renderPage();
-    });
-    return btn;
-  }
-
-  function buildCard(product) {
-    const card = document.createElement('div');
-    card.className = 'mx-compare__card';
-
-    const header = document.createElement('div');
-    header.className = 'mx-compare__card-header';
-    header.appendChild(buildCardRemoveBtn(product.handle));
-
-    if (product.featured_image) {
-      const img = document.createElement('img');
-      img.src = product.featured_image;
-      img.alt = product.title;
-      img.className = 'mx-compare__product-image';
-      img.loading = 'lazy';
-      header.appendChild(img);
-    }
-
-    const titleLink = document.createElement('a');
-    titleLink.href = product.url;
-    titleLink.className = 'mx-compare__product-title';
-    titleLink.textContent = product.title;
-    header.appendChild(titleLink);
-    card.appendChild(header);
-
-    const body = document.createElement('div');
-    body.className = 'mx-compare__card-body';
-
-    const rowKeys = ['price', 'vendor', 'availability', 'description'];
-    for (const row of ATTR_ROWS) {
-      if (!rowKeys.includes(row.key)) continue;
-      const rowEl = document.createElement('div');
-      rowEl.className = 'mx-compare__card-row';
-      rowEl.innerHTML = `<span class="mx-compare__card-label">${row.label}</span><span class="mx-compare__card-value">${getCellContent(product, row.key)}</span>`;
-      body.appendChild(rowEl);
-    }
-    card.appendChild(body);
-    return card;
-  }
-
-  let _renderVersion = 0;
-  async function renderPage() {
-    const version = ++_renderVersion;
-    const loadingEl = document.getElementById('mx-compare-loading');
-    const emptyEl = document.getElementById('mx-compare-empty');
-    const tableWrapper = document.getElementById('mx-compare-table-wrapper');
-    const headerRow = document.getElementById('mx-compare-header-row');
-    const tbody = document.getElementById('mx-compare-body');
-    const cardsEl = document.getElementById('mx-compare-cards');
-
-    let handles = MxCompare.getProducts();
-
-    if (designMode && handles.length === 0) {
-      handles = ['__preview__'];
-    }
-
-    if (handles.length === 0) {
-      loadingEl.hidden = true;
-      emptyEl.hidden = false;
-      tableWrapper.hidden = true;
-      cardsEl.hidden = true;
-      return;
-    }
-
-    loadingEl.hidden = false;
-    emptyEl.hidden = true;
-    tableWrapper.hidden = true;
-    cardsEl.hidden = true;
-
-    const products = await Promise.all(handles.map((h) => h === '__preview__' ? null : fetchProduct(h)));
-    if (version !== _renderVersion) return;
-    const validProducts = products.filter(Boolean);
-
-    loadingEl.hidden = true;
-
-    if (validProducts.length === 0) {
-      emptyEl.hidden = false;
-      return;
-    }
-
-    // Build desktop table
-    headerRow.innerHTML = '<th></th>';
-    validProducts.forEach((p) => headerRow.appendChild(buildHeaderCell(p)));
-
-    tbody.innerHTML = '';
-    for (const row of ATTR_ROWS) {
-      if (row.key === 'image') continue;
-      const tr = document.createElement('tr');
-      const th = document.createElement('th');
-      th.textContent = row.label;
-      tr.appendChild(th);
-      validProducts.forEach((p) => {
-        const td = document.createElement('td');
-        td.innerHTML = getCellContent(p, row.key);
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    }
-    tableWrapper.hidden = false;
-
-    // Build mobile cards
-    cardsEl.innerHTML = '';
-    validProducts.forEach((p) => cardsEl.appendChild(buildCard(p)));
-    cardsEl.hidden = false;
-  }
-
-  renderPage();
-  document.addEventListener('mx:compare:update', renderPage);
+  import { renderComparePage } from '{{ 'mx-compare-page.js' | asset_url }}';
+  renderComparePage();
+  document.addEventListener('mx:compare:update', renderComparePage);
 </script>
 
 {% schema %}
