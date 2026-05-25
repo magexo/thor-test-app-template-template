@@ -18,7 +18,7 @@
       class="mx-magexo-signature__cta button"
       href="{{ section.settings.cta_url }}"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       {{ section.settings.cta_label }}
     </a>
@@ -70,10 +70,9 @@
       "default": "Powered by MageXo"
     },
     {
-      "type": "text",
+      "type": "url",
       "id": "cta_url",
-      "label": "CTA URL",
-      "default": "https://magexo.cz"
+      "label": "CTA URL"
     },
     {
       "type": "text",

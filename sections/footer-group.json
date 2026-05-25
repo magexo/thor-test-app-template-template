@@ -179,7 +179,8 @@
     "mx-magexo-signature": {
       "type": "mx-magexo-signature",
       "settings": {
-        "color_scheme": "scheme-5"
+        "color_scheme": "scheme-5",
+        "cta_url": "https://magexo.cz"
       }
     }
   },
