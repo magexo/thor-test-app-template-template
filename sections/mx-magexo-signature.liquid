@@ -10,7 +10,7 @@
   >
     <span class="mx-magexo-signature__label">{{ section.settings.label_text }}</span>
     <span class="mx-magexo-signature__logo" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20" fill="none" aria-label="MageXo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20" fill="none">
         <text x="0" y="16" font-family="sans-serif" font-size="16" font-weight="700" fill="currentColor">MageXo</text>
       </svg>
     </span>
@@ -33,7 +33,6 @@
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
-    padding-block: 12px;
     border-top: 1px solid var(--color-border);
     color: var(--color-foreground-muted);
     font-size: 0.75rem;
@@ -114,7 +113,10 @@
   "presets": [
     {
       "name": "MageXo signature",
-      "category": "Footer"
+      "category": "Footer",
+      "settings": {
+        "cta_url": "https://magexo.cz"
+      }
     }
   ]
 }
