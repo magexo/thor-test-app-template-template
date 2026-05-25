@@ -1,0 +1,122 @@
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="section section--page-width color-{{ section.settings.color_scheme }}"
+  data-testid="magexo-signature"
+  {{ section.shopify_attributes }}
+>
+  <div
+    class="mx-magexo-signature spacing-style"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    <span class="mx-magexo-signature__label">{{ section.settings.label_text }}</span>
+    <span class="mx-magexo-signature__logo" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20" fill="none" aria-label="MageXo">
+        <text x="0" y="16" font-family="sans-serif" font-size="16" font-weight="700" fill="currentColor">MageXo</text>
+      </svg>
+    </span>
+    <a
+      class="mx-magexo-signature__cta button"
+      href="{{ section.settings.cta_url }}"
+      target="_blank"
+      rel="noopener"
+    >
+      {{ section.settings.cta_label }}
+    </a>
+  </div>
+</div>
+
+{% stylesheet %}
+  .mx-magexo-signature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-block: 12px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-foreground-muted);
+    font-size: 0.75rem;
+  }
+
+  .mx-magexo-signature__label {
+    opacity: 0.8;
+  }
+
+  .mx-magexo-signature__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .mx-magexo-signature__cta.button {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "MageXo signature",
+  "tag": "div",
+  "class": "mx-magexo-signature-section",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "label_text",
+      "label": "Label text",
+      "default": "Powered by MageXo"
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "default": "https://magexo.cz"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA button label",
+      "default": "Visit MageXo"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-5"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "MageXo signature",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}

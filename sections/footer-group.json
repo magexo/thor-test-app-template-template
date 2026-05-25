@@ -175,10 +175,17 @@
         "policy_list",
         "social_icons"
       ]
+    },
+    "mx-magexo-signature": {
+      "type": "mx-magexo-signature",
+      "settings": {
+        "color_scheme": "scheme-5"
+      }
     }
   },
   "order": [
     "footer",
-    "utilities"
+    "utilities",
+    "mx-magexo-signature"
   ]
 }
