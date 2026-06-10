@@ -336,5 +336,8 @@
       "default_title": "Titolo predefinito",
       "sticky_add_to_cart": "Barra per l'aggiunta rapida al carrello"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

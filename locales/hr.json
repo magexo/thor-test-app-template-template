@@ -336,5 +336,8 @@
       "success_moderated": "Komentar je objavljen, čeka moderiranje",
       "success": "Komentar objavljen"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

@@ -336,5 +336,8 @@
       "default_title": "Titlu implicit",
       "sticky_add_to_cart": "Bara de adăugare rapidă în coș"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

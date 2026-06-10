@@ -343,5 +343,8 @@
       "default_title": "Numatytasis pavadinimas",
       "sticky_add_to_cart": "Greito pridėjimo į krepšelį juosta"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

@@ -329,5 +329,8 @@
       "default_title": "預設標題",
       "sticky_add_to_cart": "快速加入購物車列"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

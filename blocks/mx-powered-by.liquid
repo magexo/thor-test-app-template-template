@@ -1,0 +1,30 @@
+<div class="mx-powered-by" {{ block.shopify_attributes }}>
+  <span class="mx-powered-by__text">{{ 'general.mx_powered_by_html' | t }}</span>
+</div>
+
+{% stylesheet %}
+  .mx-powered-by {
+    font-size: 0.75rem;
+  }
+
+  .mx-powered-by a {
+    color: inherit;
+    text-decoration: underline;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Powered by ThorCore",
+  "tag": null,
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "presets": [
+    {
+      "name": "Powered by ThorCore",
+      "category": "t:categories.footer"
+    }
+  ]
+}
+{% endschema %}

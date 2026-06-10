@@ -329,5 +329,8 @@
       "success_moderated": "评论已发布，等待审核",
       "success": "评论已发布"
     }
+  },
+  "general": {
+    "mx_powered_by_html": "Powered by <a href=\"https://www.magexo.cz\" rel=\"noopener\" target=\"_blank\">ThorCore</a>"
   }
 }

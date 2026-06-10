@@ -118,11 +118,15 @@
           "settings": {
             "width": "fill"
           }
+        },
+        "mx_powered_by": {
+          "type": "mx-powered-by"
         }
       },
       "block_order": [
         "group_wErUQf",
-        "email-signup_HafH7P"
+        "email-signup_HafH7P",
+        "mx_powered_by"
       ],
       "name": "t:names.footer",
       "settings": {
