@@ -3,6 +3,7 @@
 [Getting started](#getting-started) |
 [Staying up to date with Horizon changes](#staying-up-to-date-with-horizon-changes) |
 [Developer tools](#developer-tools) |
+[Conventions](#conventions) |
 [Contributing](#contributing) |
 [License](#license)
 
@@ -82,6 +83,25 @@ You can follow the [theme check documentation](https://shopify.dev/docs/storefro
 #### Shopify/theme-check-action
 
 Horizon runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+
+## Conventions
+
+These rules apply to **new Magexo-authored** sections and snippets added on top of Horizon. Upstream Horizon files are exempt — their names are not changed.
+
+| Rule | Detail |
+|------|--------|
+| **Prefix** | All new Magexo-authored sections and snippets use the `mx-` prefix, e.g. `sections/mx-hero.liquid`. Forward-only: existing files keep their original names. |
+| **Case** | File names are kebab-case, e.g. `sections/mx-cart-upsell.liquid`. |
+| **Granularity** | One section per feature. Use `{% render 'snippet-name' %}` to pull in shared snippets — never `{% include %}`. |
+
+### Examples from this repository
+
+The following existing Horizon sections illustrate the kebab-case, one-feature-per-file pattern that Magexo-authored `mx-` files must follow:
+
+- [`sections/hero.liquid`](sections/hero.liquid) — single-purpose hero section, kebab-case name.
+- [`sections/featured-product.liquid`](sections/featured-product.liquid) — single-purpose featured-product section, kebab-case name.
+
+A new Magexo-authored section with equivalent scope would be named `sections/mx-hero.liquid` or `sections/mx-featured-product.liquid`.
 
 ## Contributing
 
