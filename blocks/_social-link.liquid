@@ -15,6 +15,7 @@
   endif
 %}
 
+{% assign platform_name = platform | capitalize %}
 {% comment %}
   Only render the social icon if:
   1. In editor mode (always show, but may be disabled)
@@ -29,7 +30,7 @@
       href="{{ block_settings.link }}"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="{{ platform | capitalize }}"
+      aria-label="{{ 'accessibility.social_media_link' | t: platform: platform_name }}"
       {% unless has_profile %}
         {% if request.design_mode %}
           onclick="return false;"

@@ -67,7 +67,8 @@
     "view_pricing_info": "Ver informações sobre preços",
     "open_hotspot": "Hotspot aberto",
     "slideshow": "Apresentação de diapositivos",
-    "header_navigation_label": "Principal"
+    "header_navigation_label": "Principal",
+    "social_media_link": "Siga-nos no {{ platform }}"
   },
   "actions": {
     "add_to_cart": "Adicionar ao carrinho",

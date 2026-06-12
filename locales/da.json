@@ -66,7 +66,8 @@
     "view_pricing_info": "Vis prisoplysninger",
     "open_hotspot": "Åbn hotspot",
     "slideshow": "Diasshow",
-    "header_navigation_label": "Primær"
+    "header_navigation_label": "Primær",
+    "social_media_link": "Følg os på {{ platform }}"
   },
   "actions": {
     "add_to_cart": "Læg i indkøbskurven",

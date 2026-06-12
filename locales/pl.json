@@ -68,7 +68,8 @@
     "view_pricing_info": "Wyświetl informacje o cenach",
     "open_hotspot": "Otwarty hotspot",
     "slideshow": "Pokaz slajdów",
-    "header_navigation_label": "Główna"
+    "header_navigation_label": "Główna",
+    "social_media_link": "Obserwuj nas na {{ platform }}"
   },
   "actions": {
     "add_to_cart": "Dodaj do koszyka",

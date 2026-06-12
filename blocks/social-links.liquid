@@ -71,6 +71,7 @@
     {% endcomment %}
     {% if link_url != blank %}
       {% if request.design_mode or has_profile %}
+        {% assign platform_name = platform | capitalize %}
         <div
           class="social-icons__icon-wrapper{% unless has_profile %} social-icons__icon-wrapper--disabled{% endunless %}"
         >
@@ -78,7 +79,7 @@
             href="{{ link_url }}"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="{{ platform | capitalize }}"
+            aria-label="{{ 'accessibility.social_media_link' | t: platform: platform_name }}"
             {% unless has_profile %}
               {% if request.design_mode %}
                 onclick="return false;"

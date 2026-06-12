@@ -68,7 +68,8 @@
     "view_pricing_info": "Peržiūrėti kainodaros informaciją",
     "open_hotspot": "Atverti interneto prieigos tašką",
     "slideshow": "Skaidrių demonstracija",
-    "header_navigation_label": "Pagrindinis"
+    "header_navigation_label": "Pagrindinis",
+    "social_media_link": "Sekite mus {{ platform }}"
   },
   "actions": {
     "add_to_cart": "Įdėti į krepšelį",
