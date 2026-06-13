@@ -293,8 +293,8 @@
         "few": "{{ count }} comentarii"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min de citit",
+        "other": "{{ count }} min de citit"
       }
     },
     "comment_form": {

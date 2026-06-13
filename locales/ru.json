@@ -300,8 +300,8 @@
         "many": "Комментариев: {{ count }}"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} мин чтения",
+        "other": "{{ count }} мин чтения"
       }
     },
     "comment_form": {

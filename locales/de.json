@@ -318,8 +318,8 @@
         "other": "{{ count }} Kommentare"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} Min. Lesezeit",
+        "other": "{{ count }} Min. Lesezeit"
       }
     },
     "comment_form": {

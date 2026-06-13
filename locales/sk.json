@@ -300,8 +300,8 @@
         "many": "{{ count }} komentárov"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min čítania",
+        "other": "{{ count }} min čítania"
       }
     },
     "comment_form": {

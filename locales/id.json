@@ -318,8 +318,8 @@
         "other": "{{ count }} komentar"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} menit membaca",
+        "other": "{{ count }} menit membaca"
       }
     },
     "comment_form": {

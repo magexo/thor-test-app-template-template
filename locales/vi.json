@@ -286,8 +286,8 @@
         "other": "{{ count }} nhận xét"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} phút đọc",
+        "other": "{{ count }} phút đọc"
       }
     },
     "comment_form": {

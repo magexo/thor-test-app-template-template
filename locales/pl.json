@@ -300,8 +300,8 @@
         "many": "Komentarze: {{ count }}"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min czytania",
+        "other": "{{ count }} min czytania"
       }
     },
     "comment_form": {

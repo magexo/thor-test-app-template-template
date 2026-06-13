@@ -300,8 +300,8 @@
         "many": "{{ count }} komentarai (-ų)"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min skaitymo",
+        "other": "{{ count }} min skaitymo"
       }
     },
     "comment_form": {

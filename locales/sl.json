@@ -332,8 +332,8 @@
         "two": "Št. komentarjev: {{ count }}"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min branja",
+        "other": "{{ count }} min branja"
       }
     },
     "comment_form": {

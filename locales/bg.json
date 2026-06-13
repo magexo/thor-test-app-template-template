@@ -318,8 +318,8 @@
         "other": "{{ count }} коментара"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} мин четене",
+        "other": "{{ count }} мин четене"
       }
     },
     "comment_form": {

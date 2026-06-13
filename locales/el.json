@@ -318,8 +318,8 @@
         "other": "{{ count }} σχόλια"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} λεπ. ανάγνωση",
+        "other": "{{ count }} λεπ. ανάγνωση"
       }
     },
     "comment_form": {

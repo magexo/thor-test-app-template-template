@@ -318,8 +318,8 @@
         "other": "{{ count }}件のコメント"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} 分で読めます",
+        "other": "{{ count }} 分で読めます"
       }
     },
     "comment_form": {

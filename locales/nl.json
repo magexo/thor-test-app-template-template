@@ -286,8 +286,8 @@
         "other": "{{ count }} reacties"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min. leestijd",
+        "other": "{{ count }} min. leestijd"
       }
     },
     "comment_form": {

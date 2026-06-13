@@ -325,8 +325,8 @@
         "many": "{{ count }} comentários"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min de leitura",
+        "other": "{{ count }} min de leitura"
       }
     },
     "comment_form": {

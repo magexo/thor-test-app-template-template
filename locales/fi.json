@@ -318,8 +318,8 @@
         "other": "{{ count }} kommenttia"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min lukemista",
+        "other": "{{ count }} min lukemista"
       }
     },
     "comment_form": {

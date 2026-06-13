@@ -286,8 +286,8 @@
         "other": "{{ count }} yorum"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} dakika okuma",
+        "other": "{{ count }} dakika okuma"
       }
     },
     "comment_form": {

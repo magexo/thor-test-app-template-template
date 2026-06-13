@@ -286,8 +286,8 @@
         "other": "{{ count }} hozzászólás"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} perces olvasás",
+        "other": "{{ count }} perces olvasás"
       }
     },
     "comment_form": {

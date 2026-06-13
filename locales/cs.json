@@ -332,8 +332,8 @@
         "many": "počet komentářů: {{ count }}"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min čtení",
+        "other": "{{ count }} min čtení"
       }
     },
     "comment_form": {

@@ -318,8 +318,8 @@
         "other": "{{ count }} 条评论"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} 分钟阅读",
+        "other": "{{ count }} 分钟阅读"
       }
     },
     "comment_form": {

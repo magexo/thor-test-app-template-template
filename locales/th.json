@@ -318,8 +318,8 @@
         "other": "{{ count }} ความคิดเห็น"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "อ่าน {{ count }} นาที",
+        "other": "อ่าน {{ count }} นาที"
       }
     },
     "comment_form": {

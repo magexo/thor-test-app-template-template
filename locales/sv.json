@@ -286,8 +286,8 @@
         "other": "{{ count }} kommentarer"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }} min läsning",
+        "other": "{{ count }} min läsning"
       }
     },
     "comment_form": {

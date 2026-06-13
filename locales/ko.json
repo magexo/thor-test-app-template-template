@@ -318,8 +318,8 @@
         "other": "댓글 {{ count }}개"
       },
       "read_time": {
-        "one": "{{ count }} min read",
-        "other": "{{ count }} min read"
+        "one": "{{ count }}분 읽기",
+        "other": "{{ count }}분 읽기"
       }
     },
     "comment_form": {
