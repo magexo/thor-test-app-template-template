@@ -298,6 +298,10 @@
         "other": "{{ count }} komentárov",
         "few": "{{ count }} komentárov",
         "many": "{{ count }} komentárov"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

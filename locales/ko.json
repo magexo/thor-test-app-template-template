@@ -316,6 +316,10 @@
       "comments_heading": {
         "one": "댓글 {{ count }}개",
         "other": "댓글 {{ count }}개"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

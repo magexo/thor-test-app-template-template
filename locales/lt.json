@@ -298,6 +298,10 @@
         "other": "{{ count }} komentarai (-ų)",
         "few": "{{ count }} komentarai (-ų)",
         "many": "{{ count }} komentarai (-ų)"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

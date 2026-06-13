@@ -284,6 +284,10 @@
       "comments_heading": {
         "one": "{{ count }} 則留言",
         "other": "{{ count }} 則留言"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

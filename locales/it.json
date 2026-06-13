@@ -291,6 +291,10 @@
         "one": "{{ count }} commento",
         "other": "{{ count }} commenti",
         "many": "{{ count }} commenti"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

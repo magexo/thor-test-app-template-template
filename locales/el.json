@@ -316,6 +316,10 @@
       "comments_heading": {
         "one": "{{ count }} σχόλιο",
         "other": "{{ count }} σχόλια"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

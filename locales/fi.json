@@ -316,6 +316,10 @@
       "comments_heading": {
         "one": "{{ count }} kommentti",
         "other": "{{ count }} kommenttia"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

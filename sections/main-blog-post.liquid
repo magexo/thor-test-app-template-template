@@ -16,6 +16,7 @@
     <header>
       {%- content_for 'block', id: 'blog-post-title', type: 'text' %}
       {%- content_for 'block', id: 'blog-post-details', type: '_blog-post-info-text' %}
+      {%- render 'mx-reading-time', article: article -%}
     </header>
 
     {%- if article.image -%}

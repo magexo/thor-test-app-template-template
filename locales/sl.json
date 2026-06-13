@@ -330,6 +330,10 @@
         "other": "Št. komentarjev: {{ count }}",
         "few": "Št. komentarjev: {{ count }}",
         "two": "Št. komentarjev: {{ count }}"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {

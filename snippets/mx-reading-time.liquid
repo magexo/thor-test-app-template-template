@@ -1,0 +1,21 @@
+{% doc %}
+  Renders an estimated reading time badge for a blog article.
+  Calculation: word count / 200 wpm, rounded up, minimum 1 minute.
+  @param {article} article - The article object
+  @example
+  {% render 'mx-reading-time', article: article %}
+{% enddoc %}
+
+{%- if article.content != blank -%}
+  {%- assign mx_words = article.content | strip_html | strip_newlines | split: ' ' | size -%}
+  {%- assign mx_minutes = mx_words | divided_by: 200.0 | ceil | at_least: 1 -%}
+  <span class="mx-reading-time">{{ 'blogs.article.read_time' | t: count: mx_minutes }}</span>
+{%- endif -%}
+
+{% style %}
+  .mx-reading-time {
+    display: inline-block;
+    font-size: var(--font-size--body-sm, 0.875em);
+    color: rgb(var(--color-foreground-rgb) / var(--opacity-subdued-text));
+  }
+{% endstyle %}

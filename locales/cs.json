@@ -330,6 +330,10 @@
         "other": "počet komentářů: {{ count }}",
         "few": "počet komentářů: {{ count }}",
         "many": "počet komentářů: {{ count }}"
+      },
+      "read_time": {
+        "one": "{{ count }} min read",
+        "other": "{{ count }} min read"
       }
     },
     "comment_form": {
