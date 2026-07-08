@@ -87,6 +87,10 @@ Horizon runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-chec
 
 We are not accepting contributions to Horizon at this time.
 
+## Canary
+
+This repository is used as the canary target for thor pipeline verification runs.
+
 ## License
 
 Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
