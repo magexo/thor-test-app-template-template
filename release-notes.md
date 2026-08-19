@@ -22,3 +22,5 @@ This release adds a text option for header links as an alternative for the curre
 * [Product] Fixed flash of disabled buttons when changing a variant
 * [Cart] Fixed cart drawer spacing and line wrapping
 * [Page] Fixed inconsistent vertical spacing between heading presets and RTE headings
+
+<!-- WORKT-119 ship-verify canary -->
