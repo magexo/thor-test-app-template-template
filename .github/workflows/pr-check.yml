@@ -1,0 +1,46 @@
+# Minimal PR check so the canary can exercise ci_gate's check-runs READ path.
+#
+# Why this exists: the canary's only other workflow (notify-thorcore.yml) fires
+# on push to main, so a pipeline branch produced ZERO check-runs and ci_gate
+# always took the "no CI configured" skip. That meant the canary could never
+# exercise the branch where ci_gate must actually READ a non-empty check list —
+# which is exactly where the 2026-08-13 fleet-wide ci_gate failure lived
+# (hub-sklarna-ruckl RUCKL-98/100, 600s timeouts on an unreadable read).
+#
+# Deliberately trivial and fast: the point is to EXIST as a check-run on the
+# pipeline branch's head commit, not to test the theme.
+name: PR check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  liquid-syntax:
+    name: liquid-syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert theme layout is present and non-empty
+        run: |
+          set -euo pipefail
+          fail=0
+          for f in layout/theme.liquid; do
+            if [ ! -s "$f" ]; then
+              echo "::error::missing or empty: $f"
+              fail=1
+            fi
+          done
+          # Unbalanced Liquid tags are the cheapest real signal available here.
+          for f in $(find . -name '*.liquid' -not -path './.git/*'); do
+            open=$(grep -o '{%' "$f" | wc -l)
+            close=$(grep -o '%}' "$f" | wc -l)
+            if [ "$open" -ne "$close" ]; then
+              echo "::error file=$f::unbalanced Liquid tags ($open '{%' vs $close '%}')"
+              fail=1
+            fi
+          done
+          [ "$fail" -eq 0 ] && echo "OK: theme layout present, Liquid tags balanced"
+          exit "$fail"
