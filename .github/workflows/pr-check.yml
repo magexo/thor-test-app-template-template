@@ -34,9 +34,16 @@ jobs:
             fi
           done
           # Unbalanced Liquid tags are the cheapest real signal available here.
+          #
+          # NOTE the `|| true`: `grep -o` exits 1 when a file contains no match,
+          # and under `set -o pipefail` that propagates through `| wc -l` and
+          # `set -e` aborts the whole script. Most of the 233 .liquid files here
+          # have no `{%` at all, so without this the check failed on every run
+          # for no real reason — and did so convincingly enough to look like a
+          # theme defect.
           for f in $(find . -name '*.liquid' -not -path './.git/*'); do
-            open=$(grep -o '{%' "$f" | wc -l)
-            close=$(grep -o '%}' "$f" | wc -l)
+            open=$( { grep -o '{%' "$f" || true; } | wc -l )
+            close=$( { grep -o '%}' "$f" || true; } | wc -l )
             if [ "$open" -ne "$close" ]; then
               echo "::error file=$f::unbalanced Liquid tags ($open '{%' vs $close '%}')"
               fail=1
