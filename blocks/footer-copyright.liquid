@@ -8,7 +8,7 @@
   style="{% render 'typography-style', preset: 'custom', settings: block_settings %}"
   {{ block.shopify_attributes }}
 >
-  <span class="footer-utilities__text">
+  <span class="footer-utilities__text" data-cy="ship-verify-agc-39-d">
     &copy; {{ 'now' | date: '%Y' }}
     {{ shop.name | link_to: routes.root_url -}}
     {%- if block_settings.show_powered_by -%}
