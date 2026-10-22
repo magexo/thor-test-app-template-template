@@ -15,7 +15,16 @@
       , {{ powered_by_link }}
     {%- endif -%}
   </span>
+  <span class="mx-footer-canary">Canary build 2026-10-22 (3)</span>
 </div>
+
+{% stylesheet %}
+.mx-footer-canary {
+  display: block;
+  font-size: 0.625rem;
+  opacity: 0.7;
+}
+{% endstylesheet %}
 
 {% schema %}
 {
